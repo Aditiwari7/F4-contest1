@@ -8,17 +8,17 @@ function App() {
   const [msg, setMsg] = useState('');
   
   function validateNum(){
-    if(num1 == "" && num2 == ""){
+    if(num1 === "" && num2 === ""){
       setMsg("Error : Num 1 and Num 2 can't be empty")
       setResult("")
       return false;
     }
-    if(num1 == ""){
+    if(num1 === ""){
       setMsg("Error : Num 1 can't be empty")
       setResult("")
       return false;
     }
-    if(num2 == ""){
+    if(num2 === ""){
       setMsg("Error : Num 2 can't be empty")
       setResult("")
       return false;
@@ -59,7 +59,7 @@ function App() {
           <input type="button" value="/" onClick={() => calculate('/')}/>
         </div>
         <div className='result'>{result}</div>
-        <div className={(msg=="Success : Your result is shown above!")?"success":"error"}>{msg}</div>
+        <div className={(msg==="Success : Your result is shown above!")?"success":"error"}>{msg}</div>
       </div>
     </div>
   );
